@@ -11,6 +11,7 @@
     "--env=JAVA=/app/jre/bin/java",
     "--socket=x11",
     "--share=ipc",
+    "--device=dri",
     "--filesystem=home"
   ],
   "modules": [
@@ -28,14 +29,14 @@
         "cp -r icons /app/share/",
         "install -Dm644 mime/packages/* -t /app/share/mime/packages",
         "install -Dm644 metainfo/* -t /app/share/metainfo",
-        "install -Dm755 jarmemu /app/bin/jarmemu",
+        "install -Dm755 jarmemu-flatpak /app/bin/jarmemu",
         "desktop-file-install --dir=/app/share/applications fr.dwightstudio.JArmEmu.desktop"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v0.1.8/JArmEmu-0.1.8-BETA.flatpak-source.zip",
-          "sha256": "f25d9b7ce1c8722bad630a7d9dfbde95a1c04dfb41447bcf602a0ba967f3c493"
+          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v0.1.9/JArmEmu-0.1.9-RELEASE.flatpak-arch-source.zip",
+          "sha256": "2dad76201adbbde3e4e5e4b348545e734278a2ff69ea39d1295711eb06660f0c"
         }
       ]
     }
