@@ -35,8 +35,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v0.1.10/JArmEmu-0.1.10-1.flatpak-arch-source.zip",
-          "sha256": "314e77ff0237615f3e24ddc1a84198c196a74d6f44636d94b9185b0bef9a8985"
+          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v0.2.0/JArmEmu-0.2.0-3.flatpak-arch-source.zip",
+          "sha256": "1e7099fa32cd1b327117499ecb8fe74f869489da52ff00bd56c06d59efb07cbe"
         }
       ]
     }
