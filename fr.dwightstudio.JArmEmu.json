@@ -24,19 +24,25 @@
       "name": "jarmemu",
       "buildsystem": "simple",
       "build-commands": [
-        "mkdir -p /app/share/java/JArmEmu/",
-        "cp -r java/JArmEmu /app/share/java/",
-        "cp -r icons /app/share/",
-        "install -Dm644 mime/packages/* -t /app/share/mime/packages",
-        "install -Dm644 metainfo/* -t /app/share/metainfo",
-        "install -Dm755 jarmemu-flatpak /app/bin/jarmemu",
-        "desktop-file-install --dir=/app/share/applications fr.dwightstudio.JArmEmu.desktop"
+        "install -d  /app/share/java/jarmemu",
+        "ls -la",
+        "install -Dm 644 *.jar -t /app/share/java/jarmemu/",
+        "install -Dm 644 lib/* -t /app/share/java/jarmemu/lib/",
+        "install -Dm 644 resources/icons/hicolor/scalable/apps/fr.dwightstudio.JArmEmu.svg /app/share/icons/hicolor/scalable/apps/fr.dwightstudio.JArmEmu.svg",
+        "install -Dm644 resources/mime/packages/* -t /app/share/mime/packages",
+        "install -Dm644 resources/metainfo/* -t /app/share/metainfo",
+        "install -Dm755 resources/jarmemu /app/bin/jarmemu",
+        "desktop-file-install --dir=/app/share/applications resources/fr.dwightstudio.JArmEmu.desktop"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v0.2.0/JArmEmu-0.2.0-4.flatpak-arch-source.zip",
-          "sha256": "950fcdd77ff43021d8a643d43e57744e407d9508c73bf1f526cdca815e4040f8"
+          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v0.2.1/JArmEmu-0.2.1.zip",
+          "sha256": "1f8a70a2bbc59b38f4bad6cfc9cc9babb2ee45f733cda920a521fc063ba575a7"
+        },
+        {
+          "type": "patch",
+          "path": "Adapting_command_to_FlatPaks.patch"
         }
       ]
     }
