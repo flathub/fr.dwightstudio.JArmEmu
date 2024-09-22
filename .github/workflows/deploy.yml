@@ -15,8 +15,8 @@ jobs:
           VERSION: ${{ github.event.client_payload.version }}
           SUM: ${{ github.event.client_payload.sum }}
         run: |
-          jq '.modules[1].sources[0].url = "https://github.com/Dwight-Studio/JArmEmu/releases/download/v${VERSION}/JArmEmu-${VERSION}.zip"' < fr.dwightstudio.JArmEmu.json > tmp.json
-          jq '.modules[1].sources[0].sha256 = "${SUM}"' < tmp.json > fr.dwightstudio.JArmEmu.json
+          jq ".modules[1].sources[0].url = \"https://github.com/Dwight-Studio/JArmEmu/releases/download/v${VERSION}/JArmEmu-${VERSION}.zip\"" < fr.dwightstudio.JArmEmu.json > tmp.json
+          jq ".modules[1].sources[0].sha256 = \"${SUM}\"" < tmp.json > fr.dwightstudio.JArmEmu.json
           rm -f tmp.json
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
