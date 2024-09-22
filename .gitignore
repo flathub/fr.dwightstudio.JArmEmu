@@ -1,0 +1,7 @@
+Submission.md
+test-install.sh
+test-uninstall.sh
+test-run.sh
+test-clean.sh
+.flatpak-builder
+.idea
