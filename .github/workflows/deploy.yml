@@ -1,0 +1,30 @@
+name: Deployment
+run-name: Deployment (v${{ github.event.client_payload.version }})
+on:
+  repository_dispatch:
+    types: [ new-release ]
+jobs:
+  publish-to-flathub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: sudo apt-get install -y jq
+      - name: Update manifest
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+          SUM: ${{ github.event.client_payload.sum }}
+        run: |
+          jq '.modules[1].sources[0].url = "https://github.com/Dwight-Studio/JArmEmu/releases/download/v${VERSION}/JArmEmu-${VERSION}.zip"' < fr.dwightstudio.JArmEmu.json > tmp.json
+          jq '.modules[1].sources[0].sha256 = "${SUM}"' < tmp.json > fr.dwightstudio.JArmEmu.json
+          rm -f tmp.json
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'Updating manifest to v${{ github.event.client_payload.version }}'
+          branch: 'v${{ github.event.client_payload.version }}'
+          title: '[auto] Update to v${{ github.event.client_payload.version }}'
+          body: Update triggered by release from upstream
+          assignees: Deleranax
+          draft: false
+          delete-branch: true
