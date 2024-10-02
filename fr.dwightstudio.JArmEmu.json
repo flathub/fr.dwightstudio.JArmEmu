@@ -1,10 +1,12 @@
 {
-  "id" : "fr.dwightstudio.JArmEmu",
-  "runtime" : "org.freedesktop.Platform",
+  "id": "fr.dwightstudio.JArmEmu",
+  "runtime": "org.freedesktop.Platform",
   "runtime-version": "23.08",
-  "sdk" : "org.freedesktop.Sdk",
+  "sdk": "org.freedesktop.Sdk",
   "command": "jarmemu",
-  "sdk-extensions" : [ "org.freedesktop.Sdk.Extension.openjdk" ],
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.openjdk"
+  ],
   "finish-args": [
     "--env=PATH=/app/jre/bin:/app/bin:/usr/bin",
     "--env=JAVA_HOME=/app/jre",
@@ -16,9 +18,11 @@
   ],
   "modules": [
     {
-      "name" : "openjdk",
-      "buildsystem" : "simple",
-      "build-commands" : [ "/usr/lib/sdk/openjdk/install.sh" ]
+      "name": "openjdk",
+      "buildsystem": "simple",
+      "build-commands": [
+        "/usr/lib/sdk/openjdk/install.sh"
+      ]
     },
     {
       "name": "jarmemu",
@@ -36,8 +40,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v1.0.0/JArmEmu-1.0.0.zip",
-          "sha256": "5be7c12b8a5d4f88c09eca63e77fb3f559e6edffe8a6399932f7da2e6a76a23b"
+          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v1.1.0/JArmEmu-1.1.0.zip",
+          "sha256": "f69230c56194534a5322843672cec02fd3cf01dba0aebc7fdeaf93399be0209b"
         },
         {
           "type": "patch",
