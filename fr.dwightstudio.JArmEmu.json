@@ -40,8 +40,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v1.1.1/JArmEmu-1.1.1.zip",
-          "sha256": "2fff6b3dd5717ad37303a72cab96b416e592f95a6e7a61cf78a0883236ac0ad4"
+          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v1.1.2/JArmEmu-1.1.2.zip",
+          "sha256": "0aad895439551064b386845be04e817fea0e440e6179384e686129527d869a64"
         },
         {
           "type": "patch",
