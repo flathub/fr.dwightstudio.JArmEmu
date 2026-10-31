@@ -18,9 +18,9 @@
   ],
   "modules": [
     {
-      "name" : "openjdk",
-      "buildsystem" : "simple",
-      "build-commands" : [
+      "name": "openjdk",
+      "buildsystem": "simple",
+      "build-commands": [
         "/usr/lib/sdk/openjdk21/install.sh"
       ]
     },
@@ -40,8 +40,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v1.1.5/JArmEmu-1.1.5.zip",
-          "sha256": "b909e4709a21f69c1fc51ea6681240d499788d57527074713e68c4ce04d1c534"
+          "url": "https://github.com/Dwight-Studio/JArmEmu/releases/download/v1.1.7/JArmEmu-1.1.7.zip",
+          "sha256": "2c6d285734f9040e978848d535658e0b3ec71b2f0530c87230aa86230b5d3bdb"
         },
         {
           "type": "patch",
